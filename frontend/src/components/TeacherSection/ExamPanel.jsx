@@ -57,7 +57,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
             examId: examId
           }
         })
-        console.log(response.data);
+        //console.log(response.data);
       } catch(error) {
 
       }
@@ -74,12 +74,13 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
         setExamName(response.data.examData.name);
         setDuration(response.data.examData.duration);
         const response1 = await axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
-          params: { classId: 88 },
-          withCredentials: true,
+          params: { classId: classId },
+          
         });
         
-        console.log('response1 ane!');
-        console.log(response1.data);
+        //console.log('response1 ane!');
+        //console.log(classId);
+        //console.log(response1.data);
         var tempArr = [];
         response1.data.map((item) => {
           tempArr.push({
@@ -90,9 +91,11 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
             joinedAt: item.joined_at,
           });
         });
-        console.log('response1');
-        console.log(response1.data);
-        setStudentData(tempArr);
+        //console.log('response1');
+        //console.log(response1.data);
+        if(studentData.length == 0) {
+          setStudentData(tempArr);
+        }
         
         //console.log(tempArr);
       } catch (error) {
@@ -286,6 +289,8 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
 
         <div className="box-border relative  my-4 flex flex-col gap-0 w-full  bg-[#1B1D1F] rounded-sm outline outline-1 outline-[#1f2124]">
           <div className="flex flex-row gap-2 flex-wrap max-h-[150px] h-[150px] overflow-y-scroll p-2 content-start">
+            {console.log('testing')}
+            {console.log(studentData)}
             {studentData.map((item) => {
              
               return (

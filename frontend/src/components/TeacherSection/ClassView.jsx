@@ -129,7 +129,7 @@ export const ClassView = ({ classId, classroomName, subjectName,socket, setExamS
     setLoadingStudents(true);
     try {
       const response = axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
-        params: { classId: 88 },
+        params: { classId: classId },
         withCredentials: true,
       });
       //console.log("Response:", response.data);
