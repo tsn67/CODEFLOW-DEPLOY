@@ -26,7 +26,7 @@ export const StudentPage = () => {
     const getStudentDetails = async () => {
       try {
         const response = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/studentInfo?studentId=${studentId}`
+          `https://codeflow-deploy-production.up.railway.app/studentInfo?studentId=${studentId}`
         );
         setStudentData(response.data);
         //console.log("hello stud: ",response.data);
@@ -42,7 +42,7 @@ export const StudentPage = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://hats-project-deployment-production.up.railway.app/allClassInfo?studentId=${studentId}`
+        `https://codeflow-deploy-production.up.railway.app/allClassInfo?studentId=${studentId}`
       );
       if (response.data.msg) {
         setData([]);
@@ -65,7 +65,7 @@ export const StudentPage = () => {
       setClassCode("");
 
       const response = await axios.post(
-        "https://hats-project-deployment-production.up.railway.app/joinClass",
+        "https://codeflow-deploy-production.up.railway.app/joinClass",
         {
           studentId: studentId,
           classCode: classCode,

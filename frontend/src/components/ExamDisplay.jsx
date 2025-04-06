@@ -13,7 +13,7 @@ export const ExamDisplay = ({id, rollNo}) => {
     const fetchExams = async (classId) => {
       try {
         const response = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getExamsInClass/?classId=${classId}`
+          `https://codeflow-deploy-production.up.railway.app/getExamsInClass/?classId=${classId}`
         );
         setExams(response.data);
       } catch (error) {

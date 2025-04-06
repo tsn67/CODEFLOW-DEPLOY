@@ -48,7 +48,7 @@ const OnlyPipeSignupPage = () => {
     //console.log(userDetails);
     try {
       const response = await axios.post(
-        `https://hats-project-deployment-production.up.railway.app/register/${userDetails.role}`,
+        `https://codeflow-deploy-production.up.railway.app/register/${userDetails.role}`,
         userDetails
       );
       navigate("/login");

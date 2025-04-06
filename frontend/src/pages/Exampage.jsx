@@ -69,7 +69,7 @@ function Exampage() {
     var data = null;
     async function getExamDetails() {
       const response = await axios.get(
-        `https://hats-project-deployment-production.up.railway.app/exam?examId=${examId}`
+        `https://codeflow-deploy-production.up.railway.app/exam?examId=${examId}`
       );
       
       //console.log(response.data.duration);
@@ -130,7 +130,7 @@ function Exampage() {
     const timer1 = setTimeout(() => {
       setLoaded(true);
     }, 2000);
-    socket.current = io("hats-project-deployment-production.up.railway.app", {
+    socket.current = io("https://codeflow-deploy-production.up.railway.app", {
       withCredentials: true,
       transports: ["websocket", "polling"],
     });

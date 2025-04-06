@@ -19,7 +19,7 @@ function Dashboard({id, changer}) {
     const fetchName = async (id) => {
       try {
         const response = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getStudentInfo/?sid=${id}`
+          `https://codeflow-deploy-production.up.railway.app/getStudentInfo/?sid=${id}`
         );
         setName(response.data.data.name);
         setLoading(0)

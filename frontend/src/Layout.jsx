@@ -14,7 +14,7 @@ function Layout() {
     const checkAuth = async () => {
       try {
         dispatch(setIsCheckingAuth(true));
-        const response = await axios.get("https://hats-project-deployment-production.up.railway.app/check-auth", {
+        const response = await axios.get("https://codeflow-deploy-production.up.railway.app/check-auth", {
           withCredentials: true,
         });
         //console.log("Lay out running ");

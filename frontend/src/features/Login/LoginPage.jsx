@@ -37,7 +37,7 @@ const LoginPage = () => {
     dispatch(setLoading(true));
     try {
       const response = await axios.post(
-        "https://hats-project-deployment-production.up.railway.app/login",
+        "https://codeflow-deploy-production.up.railway.app/login",
         loginDetails,
         {withCredentials: true}
       );

@@ -11,7 +11,7 @@ const DashClass = ({studentId, changer}) => {
         try {
          
           const response = await axios.get(
-            `https://hats-project-deployment-production.up.railway.app/someClassInfo?studentId=${studentId}`
+            `https://codeflow-deploy-production.up.railway.app/someClassInfo?studentId=${studentId}`
           );
          
           if (response.data.msg) {

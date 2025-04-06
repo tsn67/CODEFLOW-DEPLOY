@@ -28,13 +28,13 @@ const ExamGraph = ({
       try {
         // Fetch student's past scores
         const examResponse = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getPast6Scores/?sid=${id}`
+          `https://codeflow-deploy-production.up.railway.app/getPast6Scores/?sid=${id}`
         );
         setPastExam(examResponse.data);
         
         // Fetch class average scores
         const resultResponse = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getPast6Average`
+          `https://codeflow-deploy-production.up.railway.app/getPast6Average`
         );
         setPastResult(resultResponse.data);
         

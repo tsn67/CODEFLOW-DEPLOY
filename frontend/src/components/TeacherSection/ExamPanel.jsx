@@ -52,7 +52,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
     // convertToPDFandDownload();
     async function getResultData() {
       try {
-        const response = await axios.get('https://hats-project-deployment-production.up.railway.app/getResult', {
+        const response = await axios.get('https://codeflow-deploy-production.up.railway.app/getResult', {
           params: {
             examId: examId
           }
@@ -67,12 +67,12 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
     async function getFullData() {
       setLoading(true);
       try {
-        const response = await axios.get("https://hats-project-deployment-production.up.railway.app/getExamData/", {
+        const response = await axios.get("https://codeflow-deploy-production.up.railway.app/getExamData/", {
           params: { examId: examId },
         });
         setExamName(response.data.examData.name);
         setDuration(response.data.examData.duration);
-        const response1 = axios.get(`https://hats-project-deployment-production.up.railway.app/getClassStudents`, {
+        const response1 = axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
           params: { classId: 88 },
           withCredentials: true,
         });
@@ -124,7 +124,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
   const socket = useRef(null);
 
   useEffect(() => {
-    socket.current = io("https://hats-project-deployment-production.up.railway.app", {
+    socket.current = io("https://codeflow-deploy-production.up.railway.app", {
       withCredentials: true,
       transports: ["websocket.currentRef", "polling"]
     });

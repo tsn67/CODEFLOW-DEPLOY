@@ -17,7 +17,7 @@ const ResetPasswordPage = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://hats-project-deployment-production.up.railway.app/reset-password",
+        "https://codeflow-deploy-production.up.railway.app/reset-password",
         {token, newPassword}
       );
       //  console.log(response);

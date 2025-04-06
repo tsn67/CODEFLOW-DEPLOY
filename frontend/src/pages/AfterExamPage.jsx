@@ -93,7 +93,7 @@ function AfterExamPage({ }) {
     console.log(results)
 
     axios.post(
-      `https://hats-project-deployment-production.up.railway.app/saveresult`,{results}
+      `https://codeflow-deploy-production.up.railway.app/saveresult`,{results}
     ).then(response => {
       console.log('Results saved successfully:', response.data);
       navigate(`/studentPage/${studentId}`, { replace: true });

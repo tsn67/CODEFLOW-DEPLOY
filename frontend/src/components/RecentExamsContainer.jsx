@@ -21,7 +21,7 @@ const RecentExamsContainer = ({id,changer}) => {
       const fetchRecentExam = async (id) => {
         try {
           const response = await axios.get(
-            `https://hats-project-deployment-production.up.railway.app/getRecentExams/?sid=${id}`
+            `https://codeflow-deploy-production.up.railway.app/getRecentExams/?sid=${id}`
           );
        
           setRecentExam(response.data);

@@ -40,7 +40,7 @@ export const Teacher = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://hats-project-deployment-production.up.railway.app/createClass",
+        "https://codeflow-deploy-production.up.railway.app/createClass",
         classData,
         {
           headers: {
@@ -71,7 +71,7 @@ export const Teacher = () => {
   async function getClases() {
     setLoading(true);
     try {
-      const response = await axios.get("https://hats-project-deployment-production.up.railway.app/getClasses", {
+      const response = await axios.get("https://codeflow-deploy-production.up.railway.app/getClasses", {
         params: {
           teacherId: teacherId,
         },

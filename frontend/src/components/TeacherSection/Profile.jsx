@@ -33,7 +33,7 @@ const Profile = ({teacherId}) => {
       try {
         setLoading(true);
         setError(null);
-        await axios.put(`https://hats-project-deployment-production.up.railway.app/updateTeacherData`, {
+        await axios.put(`https://codeflow-deploy-production.up.railway.app/updateTeacherData`, {
           id: teacherId,
           name: updateData.name,
           email: updateData.email,
@@ -71,7 +71,7 @@ const Profile = ({teacherId}) => {
         setLoading(true);
         setError(null);
         const response = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getTeacherData`,
+          `https://codeflow-deploy-production.up.railway.app/getTeacherData`,
           {
             params: {id: teacherId},
           }

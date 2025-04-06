@@ -19,7 +19,7 @@ export const StopButton = ({examId, setRender, socket, setSelected}) => {
 
         //update the backend db
         try {
-            const response = await axios.get("https://hats-project-deployment-production.up.railway.app/stopExam", {
+            const response = await axios.get("https://codeflow-deploy-production.up.railway.app/stopExam", {
                 params: {
                     examId: examId
                 }

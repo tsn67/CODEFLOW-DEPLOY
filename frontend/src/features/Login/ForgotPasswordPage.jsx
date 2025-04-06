@@ -32,7 +32,7 @@ const ForgotPasswordPage = () => {
     dispatch(setLoading(true));
     try {
       const response = await axios.post(
-        "hats-project-deployment-production.up.railway.app/forgot-password",
+        "https://codeflow-deploy-production.up.railway.app/forgot-password",
         {email}
       );
       //console.log(response);

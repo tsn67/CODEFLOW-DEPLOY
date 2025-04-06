@@ -31,7 +31,7 @@ export const ClassView = ({ classId, classroomName, subjectName,socket, setExamS
 
   async function getClassCode() {
     try {
-      const response = await axios.get("https://hats-project-deployment-production.up.railway.app/getClassCode", {
+      const response = await axios.get("https://codeflow-deploy-production.up.railway.app/getClassCode", {
         params: {
           classId: classId,
         },
@@ -87,7 +87,7 @@ export const ClassView = ({ classId, classroomName, subjectName,socket, setExamS
   async function getExamData() {
     setLoadingExams(true);
     try {
-      const response = await axios.get("https://hats-project-deployment-production.up.railway.app/getExams", {
+      const response = await axios.get("https://codeflow-deploy-production.up.railway.app/getExams", {
         params: {
           classId: classId,
         },
@@ -128,7 +128,7 @@ export const ClassView = ({ classId, classroomName, subjectName,socket, setExamS
   async function getNewStudents() {
     setLoadingStudents(true);
     try {
-      const response = axios.get(`https://hats-project-deployment-production.up.railway.app/getClassStudents`, {
+      const response = axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
         params: { classId: 88 },
         withCredentials: true,
       });

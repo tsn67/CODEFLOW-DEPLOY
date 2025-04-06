@@ -40,7 +40,7 @@ function Classes() {
     try {
      
       const response = await axios.get(
-        `https://hats-project-deployment-production.up.railway.app/allClassInfo?studentId=${studentId}`
+        `https://codeflow-deploy-production.up.railway.app/allClassInfo?studentId=${studentId}`
       );
       if (response.data.msg) {
         setData([]);
@@ -67,7 +67,7 @@ function Classes() {
       //console.log(classCode)
 
       const response = await axios.post(
-        "https://hats-project-deployment-production.up.railway.app/joinClass",
+        "https://codeflow-deploy-production.up.railway.app/joinClass",
         {
           studentId: studentId,
           classCode: classCode,

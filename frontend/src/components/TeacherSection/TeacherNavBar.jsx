@@ -31,7 +31,7 @@ export const TeacherNavBar = ({selected = 'classes', setSelected, setOpen, clear
       console.log("Logging out");
       try {
         const response = await axios.post(
-          "https://hats-project-deployment-production.up.railway.app/logout",
+          "https://codeflow-deploy-production.up.railway.app/logout",
           {},
           {
             withCredentials: true,

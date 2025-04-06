@@ -104,7 +104,7 @@ function About({classId, setCreateExam, setNewState}) {
     setLoading(true);
     
     try {
-      const response = await axios.post("https://hats-project-deployment-production.up.railway.app/createExam", examDetails, {
+      const response = await axios.post("https://codeflow-deploy-production.up.railway.app/createExam", examDetails, {
         headers: { "Content-Type": "application/json" },
       });
       

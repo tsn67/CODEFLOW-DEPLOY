@@ -17,7 +17,7 @@ function Results({ examId, onClose, studentId, examName }) {
         // Fetch results first
 
         const resultsResponse = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/getResultForStudent?sid=${studentId}&eid=${examId}`
+          `https://codeflow-deploy-production.up.railway.app/getResultForStudent?sid=${studentId}&eid=${examId}`
         );
         const results = resultsResponse.data;
         console.log(results)
@@ -25,7 +25,7 @@ function Results({ examId, onClose, studentId, examName }) {
 
         // Then fetch exam details
         const examResponse = await axios.get(
-          `https://hats-project-deployment-production.up.railway.app/exam?examId=${examId}`
+          `https://codeflow-deploy-production.up.railway.app/exam?examId=${examId}`
         );
         const data = examResponse.data.questionDetails;
         console.log(examResponse.data)

@@ -28,7 +28,7 @@ const TempStartPage = () => {
         setLoading(true);
         //get exam headers from backend
         async function getHeaders() {
-            const response = await axios.get('https://hats-project-deployment-production.up.railway.app/exam-header');
+            const response = await axios.get('https://codeflow-deploy-production.up.railway.app/exam-header');
             //console.log(response.data.data);
             setExamHeaders(response.data.data);
             setLoading(false);
