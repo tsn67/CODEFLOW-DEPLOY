@@ -78,9 +78,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
           
         });
         
-        //console.log('response1 ane!');
-        //console.log(classId);
-        //console.log(response1.data);
+        
         var tempArr = [];
         response1.data.map((item) => {
           tempArr.push({
