@@ -73,31 +73,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
         });
         setExamName(response.data.examData.name);
         setDuration(response.data.examData.duration);
-        const response1 = await axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
-          params: { classId: classId },
-          
-        });
         
-        console.log('response1 ane!');
-        console.log(classId);
-        //console.log(response1.data);
-        var tempArr = [];
-        response1.data.map((item) => {
-          tempArr.push({
-            RollNo: item.roll_no,
-            status: item.status?item.status:'not-joined',
-            Name: item.name,
-            UniversityNum: item.admission_no,
-            joinedAt: item.joined_at,
-          });
-        });
-        //console.log('response1');
-        //console.log(response1.data);
-        if(studentData.length == 0) {
-          setStudentData(tempArr);
-        }
-        
-        //console.log(tempArr);
       } catch (error) {
         console.log('error form here!');
         console.log(error);
