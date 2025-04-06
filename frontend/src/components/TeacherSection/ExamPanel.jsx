@@ -77,6 +77,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
           withCredentials: true,
         });
         
+        console.log('response1 ane!');
         console.log(response1.data);
         var tempArr = [];
         response1.data.map((item) => {
@@ -90,12 +91,11 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
         });
         console.log('response1');
         console.log(response1.data);
-        if(studentData.length == 0) {
-          setStudentData(tempArr);
-          //console.log(tempArr);
-        }
+        setStudentData(tempArr);
+        
         //console.log(tempArr);
       } catch (error) {
+        console.log('error form here!');
         console.log(error);
       } finally {
         setLoading(false);
