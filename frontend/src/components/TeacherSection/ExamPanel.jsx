@@ -67,12 +67,13 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
     async function getFullData() {
       setLoading(true);
       try {
+
         const response = await axios.get("https://codeflow-deploy-production.up.railway.app/getExamData/", {
           params: { examId: examId },
         });
         setExamName(response.data.examData.name);
         setDuration(response.data.examData.duration);
-        const response1 = axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
+        const response1 = await axios.get(`https://codeflow-deploy-production.up.railway.app/getClassStudents`, {
           params: { classId: 88 },
           withCredentials: true,
         });
