@@ -172,7 +172,7 @@ export const ExamPanel = ({ examId = 22, setSelected }) => {
             return foundStudent? { ...student, status: foundStudent.status } : student;
           });   
         });   
-      }, 1000);
+      }, 2000);
       
     });
   
